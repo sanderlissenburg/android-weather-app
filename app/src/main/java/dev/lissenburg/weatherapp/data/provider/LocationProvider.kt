@@ -1,0 +1,8 @@
+package dev.lissenburg.weatherapp.data.provider
+
+import dev.lissenburg.weatherapp.data.db.entity.WeatherLocation
+
+interface LocationProvider {
+    suspend fun hasLocationChanged(lastWeatherLocation: WeatherLocation): Boolean
+    suspend fun getPreferredLocationString(): String
+}
